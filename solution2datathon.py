@@ -10,7 +10,7 @@ from tensorflow.keras import Input
 from tensorflow.keras import Model
 
 # Load data
-df = pd.read_csv("dataset3_addnoise_out.csv")
+df = pd.read_csv("flow_simulation_data.csv")
 
 data_cols = list(list(df)[i] for i in [8,9,10])
 
