@@ -46,6 +46,15 @@ The dataset encompasses ten distinct reservoirs, earmarked for training (nine) a
 - Static Data: X-coordinate, Y-coordinate, porosity, permeability, and formation thickness.
 - Time Series Data: Each well's flow rate and bottom hole pressure. This data spans the 365-day timeframe, recorded daily.
 
+## Model Description
+
+To achieve more accurate predictions, we leverage the surrounding well's bottom hole pressure as an additional input to our model. This augmentation of input features allows us to capture more nuanced relationships within the data. To address the temporal nature of the problem, we employ Long Short-Term Memory (LSTM) networks, a type of recurrent neural network (RNN) capable of modelling sequences and time-dependent patterns. Using LSTM, we aim to simulate and predict the flow rates with enhanced accuracy and predictive power.
+
+## Results
+
+**Flow Rate Predictions for Wells 19, 20, 24, and 25:**
+![GitHub Logo](https://github.com/Kimi-cyber/2022AI4SocietyDatathon/blob/main/Images/Picture5.png)
+
 ## Let's Dive In!
 
 As we embark on this data-driven journey through the complexities of subsurface engineering, we are presented with the opportunity to unravel the intricacies that drive water injection and production within sandstone reservoirs. Armed with reservoir information and operational insights, the challenge beckons us to wield the tools of data analysis and prediction to crack the code of flow rates for specific producer wells. Join us in this captivating pursuit at the intersection of science and technology!
