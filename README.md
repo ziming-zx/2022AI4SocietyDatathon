@@ -5,6 +5,8 @@
 In subsurface engineering applications, water injection into underground formations plays a pivotal role. A prime example is the extraction of geothermal energy, where the injection of cold water triggers the production of hot water from a different location. Similarly, this practice finds its application in oil and gas reservoir development as well as solution mining processes. The dynamics underlying this process are intricate, marked by highly nonlinear relationships among diverse variables. To streamline the complexity, we narrowed our focus to a simplified scenario encompassing single-phase water flow in an environment characterized by minimal compressibility and constant temperature. In essence, we delve into water injection and production challenges within a sandstone reservoir.
 
 ![GitHub Logo](https://github.com/Kimi-cyber/2022AI4SocietyDatathon/blob/main/Images/Picture1.png)
+https://plant-engineering.tistory.com/267 
+
 
 ## Problem Statement
 
@@ -53,7 +55,9 @@ To achieve more accurate predictions, we leverage the surrounding well's bottom 
 ## Results
 
 **Flow Rate Predictions for Wells 19, 20, 24, and 25:**
-![GitHub Logo](https://github.com/Kimi-cyber/2022AI4SocietyDatathon/blob/main/Images/Picture5.png)
+<div style="text-align:center">
+  <img src="https://github.com/Kimi-cyber/2022AI4SocietyDatathon/blob/main/Images/Picture6.png" alt="GitHub Logo" width="500">
+</div>
 
 ## Let's Dive In!
 
