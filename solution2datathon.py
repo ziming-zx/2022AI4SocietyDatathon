@@ -2,11 +2,8 @@ import time
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-
-
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error, mean_absolute_error
-
 from tensorflow.keras.layers import LSTM, Bidirectional, Concatenate
 from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras import Input
@@ -17,7 +14,7 @@ df = pd.read_csv("dataset3_addnoise_out.csv")
 
 data_cols = list(list(df)[i] for i in [8,9,10])
 
-# Formulate the Input and Ouput
+# Formulate the Input and Output
 well_locs = pd.read_csv("well_loc.txt", sep="\t", header=None)
 well_locs.columns = ['x','y']
 well_locs = well_locs.to_numpy()
