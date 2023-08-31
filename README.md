@@ -1,6 +1,4 @@
-# 2022AI4SocietyDatathon
-
-# Subsurface Engineering Data Analysis: A flow problem
+# 2022AI4SocietyDatathon: A Flow Problem
 
 ## Introduction and Background
 
