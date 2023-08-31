@@ -9,7 +9,7 @@ from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras import Input
 from tensorflow.keras import Model
 
-# Load data
+#---------- Load Data ---------
 df = pd.read_csv("flow_simulation_data.csv")
 
 data_cols = list(list(df)[i] for i in [8,9,10])
@@ -19,6 +19,7 @@ well_locs = pd.read_csv("well_loc.txt", sep="\t", header=None)
 well_locs.columns = ['x','y']
 well_locs = well_locs.to_numpy()
 
+#---------- Process Data ---------
 def Euc_dist(loc1,loc2):
     dist = np.sqrt((loc1[0]-loc2[0])**2+(loc1[1]-loc2[1])**2)
     return dist
@@ -125,25 +126,19 @@ print('Train Label shape == {}'.format(train_labels.shape))
 print('Test Input shape == {}'.format(test_inputs.shape))
 print('Test Label shape == {}'.format(test_labels.shape))
 
-# Define model
+#---------- Define model ---------
 # Define input layer
 LSTM_input = Input(shape=(train_inputs.shape[1],train_inputs.shape[2]),name="Dynamic_Inputs")
 print(LSTM_input)
-
 # layer 1
 rec_layer_one = LSTM(64,return_sequences=True,name ="LSTM_layer1")(LSTM_input)
-
 rec_layer_one = Dropout(0.2,name ="LSTM_ouput_layer1")(rec_layer_one)
-
 # layer 2
 rec_layer_two = LSTM(64,return_sequences=True,name ="LSTM_layer2")(rec_layer_one)
-
 rec_layer_two = Dropout(0.2,name ="LSTM_ouput_layer2")(rec_layer_two)
-
 # layer 3
 dense_two = Dense(128, activation='tanh',name="Combined_Dense_layer1")(rec_layer_two)
 output = Dense(train_labels.shape[2],activation='tanh',name="Output_layer")(dense_two)
-
 # Compile ModeL
 # We first train using binary cross entropy loss and then train the same model using focal loss.
 model = Model(inputs=LSTM_input,outputs=output)
@@ -151,6 +146,7 @@ model = Model(inputs=LSTM_input,outputs=output)
 model.compile(loss='mse', optimizer='adam')
 model.summary()
 
+#---------- Train model ---------
 # change float 64 to float 32 to accelerate the trainning process
 start_time = time.time() # record the time training the model
 history =  model.fit(train_inputs,
@@ -166,13 +162,12 @@ plt.ylabel('loss')
 plt.xlabel('epoch')
 plt.legend(['train', 'validation'], loc='upper left')
 plt.show()
-
 # Save the weight
 filename="weight1000ep"
 filepath = filename+".hdf5"
 model.save_weights(filepath)
 
-# Testing
+#---------- Test model ---------
 # plots qw
 fig, ax = plt.subplots(2, 2, figsize=(15, 13))
 n = 0
@@ -191,10 +186,8 @@ for i in range(1, 3):
         scaler.fit(labels3)
         testPredict_label_org = scaler.inverse_transform(testPredict_label)
         testPredict_org = scaler.inverse_transform(testPredict)
-
         testScore = mean_squared_error(testPredict_label_org, testPredict_org, squared=False)
         print('Test Score: %.2f RMSE' % (testScore))
-
         # Plot
         ax[i - 1, j - 1].plot(range(t_steps), testPredict_label_org, 'ro-', mfc='none', label='Original', linewidth=1)
         ax[i - 1, j - 1].plot(range(t_steps), testPredict_org, 'b-+', label='Predicted', linewidth=1)
