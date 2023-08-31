@@ -16,7 +16,6 @@ Welcome to the Subsurface Engineering Data Analysis competition! The crux of thi
 
 The primary objective of this competition is to harness the power of data science to forecast the flow rates of the specified producer wells. This prediction is rooted in the reservoir's intrinsic characteristics and the historical production and injection data.
 
-![GitHub Logo](https://github.com/Kimi-cyber/2022AI4SocietyDatathon/blob/main/Images/Picture2.png)
 <div style="text-align:center">
   <img src="https://github.com/Kimi-cyber/2022AI4SocietyDatathon/blob/main/Images/Picture2.png" alt="GitHub Logo" width="500">
 </div>
