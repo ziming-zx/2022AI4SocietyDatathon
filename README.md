@@ -27,7 +27,7 @@ The primary objective of this competition is to harness the power of data scienc
 
 ### Reservoir Information
 
-The stage is set with a shallow marine deposit, housing a sandstone reservoir. The constant initial pressure is clocked at 33,095 kPa. The defining attributes at each well comprise the unvarying "static" properties:
+The stage is set with a shallow marine deposit, housing a sandstone reservoir. We assume a constant reservoir pressure of 33,095 kPa. The defining attributes at each well comprise the unvarying "static" properties:
 
 - Porosity: Percentage of void space.
 - Permeability: Governs fluid flow ease.
