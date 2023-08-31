@@ -18,7 +18,7 @@ The primary objective of this competition is to harness the power of data scienc
 
 ![GitHub Logo](https://github.com/Kimi-cyber/2022AI4SocietyDatathon/blob/main/Images/Picture2.png)
 <div style="text-align:center">
-  <img src="https://github.com/Kimi-cyber/2022AI4SocietyDatathon/blob/main/Images/Picture2.png" alt="GitHub Logo" width="500">
+  <img src="https://github.com/Kimi-cyber/2022AI4SocietyDatathon/blob/main/Images/Picture2.png" alt="GitHub Logo" width="800">
 </div>
 
 
