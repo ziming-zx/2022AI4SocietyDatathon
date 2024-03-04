@@ -47,8 +47,8 @@ The injection pattern follows a 5-spot configuration. Noteworthy wells include n
 
 The dataset encompasses ten distinct reservoirs, earmarked for training (nine) and testing (one) purposes. Each reservoir's dataset entails:
 
-- Static Data: X-coordinate, Y-coordinate, porosity, permeability, and formation thickness.
-- Time Series Data: Each well's flow rate and bottom hole pressure. This data spans the 365-day timeframe, recorded daily.
+- Static Data: `X-coordinate`, `Y-coordinate`, `porosity`, `permeability`, and `formation thickness`.
+- Time Series Data: Each well's `flow rate` and `bottom hole pressure`. This data spans the 365-day timeframe, recorded daily.
 
 ## Model Description
 
