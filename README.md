@@ -29,11 +29,11 @@ The primary objective of this competition is to harness the power of data scienc
 
 The stage is set with a shallow marine deposit, housing a sandstone reservoir. We assume a constant reservoir pressure of 33,095 kPa. The defining attributes at each well comprise the unvarying "static" properties:
 
-- Porosity: Percentage of void space.
-- Permeability: Governs fluid flow ease.
-- Thickness: The reservoir's vertical extent.
-- X-coordinate: Horizontal positioning.
-- Y-coordinate: Lateral positioning.
+- `Porosity`: Percentage of void space.
+- `Permeability`: Governs fluid flow ease.
+- `Thickness`: The reservoir's vertical extent.
+- `X-coordinate`: Horizontal positioning.
+- `Y-coordinate`: Lateral positioning.
 
 ![GitHub Logo](https://github.com/Kimi-cyber/2022AI4SocietyDatathon/blob/main/Images/Picture4.png)
 
